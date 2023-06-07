@@ -1,12 +1,12 @@
 from airflow import DAG
 import airflow.utils.dates
-#from airflow.providers.airbyte.operators.airbyte import AirbyteTriggerSyncOperator
 from airflow.operators.bash import BashOperator
 
 dag = DAG(
-    dag_id = "estudo_covid",
-    schedule_interval='@daily',
+    dag_id = "hello_world",
+    description="teste",
     start_date=airflow.utils.dates.days_ago(14),
+    schedule_interval=None,
 )
 
 task_echo_message = BashOperator(
